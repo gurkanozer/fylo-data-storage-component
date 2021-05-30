@@ -196,8 +196,7 @@ main {
         overflow: hidden;
         background: $veryDarkBlue;
         border: 2px solid $veryDarkBlue;
-        animation: scaleAnim 0.4s ease backwards;
-        animation-delay: 0.7s;
+        animation: scaleAnim 0.4s ease backwards 0.7s;
 
         .bar {
             display: block;
@@ -205,6 +204,7 @@ main {
             background: $gradient;
             position: relative;
             border-radius: 8px;
+            animation: progressbarAnim 1.6s ease backwards 1s;
 
             &:after {
                 content: "";
@@ -263,6 +263,18 @@ main {
     }
 }
 
+@keyframes progressbarAnim {
+    0% {
+        width: 0;
+    }
+
+    %100 {
+        width: 100%
+    }
+}
+
+
+/**ATTRIBUTION*/
 .attribution {
     padding: 2rem;
     background: $veryDarkBlue;
